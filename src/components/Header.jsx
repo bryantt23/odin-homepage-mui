@@ -17,16 +17,18 @@ function Header() {
                     width: "100%",
                 }}>
             </Box>
-            <Typography
-                variant="h2"
+            <Box
                 sx={{
                     position: 'absolute',
                     bottom: 20,
                     left: 30,
                     color: 'white',
-                    outline: 'black',
-                }}
-            >Ashley Williams</Typography>
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)',
+                }}>
+                <Typography variant="h2">
+                    Ashley Williams
+                </Typography>
+            </Box>
         </Box>
     )
 }
