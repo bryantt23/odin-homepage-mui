@@ -70,6 +70,7 @@ button:focus-visible {
 /* Use Roboto by default */
 body {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
 }
 
 /* Specific styles for Playfair Display, perhaps for headings */
