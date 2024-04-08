@@ -8,10 +8,25 @@ function Header() {
             display: 'flex',
             flexDirection: "column",
             alignItems: 'center',
-            padding: 2
+            padding: 2,
+            position: 'relative',
         }}>
-            <Box component="img" src={Headshot} sx={{ width: "100%" }}></Box>
-            <Typography variant="h2">Ashley Williams</Typography>
+            <Box component="img"
+                src={Headshot}
+                sx={{
+                    width: "100%",
+                }}>
+            </Box>
+            <Typography
+                variant="h2"
+                sx={{
+                    position: 'absolute',
+                    bottom: 20,
+                    left: 30,
+                    color: 'white',
+                    outline: 'black',
+                }}
+            >Ashley Williams</Typography>
         </Box>
     )
 }
