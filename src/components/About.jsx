@@ -14,10 +14,11 @@ function About() {
             <Box sx={{
                 display: 'flex',
                 justifyContent: "center",
-                padding: 1
+                padding: 1,
+                gap: 2
             }}>
                 <Avatar src={Github} />
-                <Avatar src={LinkedIn} sx={{ margin: "0 15px 0 15px" }} />
+                <Avatar src={LinkedIn} />
                 <Avatar src={Twitter} />
             </Box>
         </Box>
