@@ -1,6 +1,5 @@
 import './App.css'
 import Header from './components/Header'
-import About from './components/About'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 import { createTheme, ThemeProvider, } from '@mui/material';
@@ -35,7 +34,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <About />
       <Projects />
       <Footer />
     </ThemeProvider>
