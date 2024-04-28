@@ -5,7 +5,7 @@ import LaunchIcon from '@mui/icons-material/Launch';
 
 function Project({ color }) {
     return (
-        <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column' }}>
+        <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', padding: 2 }}>
             <Card variant="elevation" sx={{ margin: 1 }}>
                 <Box sx={{ backgroundColor: color, height: 300, alignContent: 'center', textAlign: 'center' }}>
                     <Typography variant="h4" sx={{ color: 'white' }}>screenshot of project</Typography>
