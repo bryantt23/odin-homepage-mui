@@ -9,13 +9,13 @@ function Footer() {
             <Grid item md={6} xs={12}>
                 <Contact />
             </Grid>
-            <Grid item md={6} xs={12}>
+            <Grid item md={6} xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
                 <Box component="img"
                     src={Headshot}
                     sx={{
                         objectFit: "contain",
-                        width: "100%",
-                        height: "100%"
+                        width: { xs: "100%", sm: "90%" },
+                        height: "100%",
                     }}>
                 </Box></Grid>
         </Grid>
