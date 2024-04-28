@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Avatar, Hidden, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Typography, Avatar, Hidden, useMediaQuery, useTheme, } from '@mui/material';
 import Headshot from '../assets/images/pexels-anna-shvets-3727474.jpg';
 import Github from '../assets/images/github-mark.png';
 import LinkedIn from '../assets/images/LinkedIn_icon_circle.png';
@@ -22,18 +22,34 @@ function Header() {
                 width: isMdUp ? '50%' : '100%',
             }}>
                 <Box component="img" src={Headshot} sx={{ width: "100%" }} />
-                <Box sx={{
-                    position: 'absolute',
-                    bottom: 25,
-                    left: 35,
-                    color: 'white',
-                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)',
-                }}>
-                    <Typography variant="h2">Ashley Williams</Typography>
-                </Box>
+
+                <Hidden mdUp>
+                    <Box sx={{
+                        position: 'absolute',
+                        bottom: 25,
+                        left: 35,
+                        color: 'white',
+                        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)',
+                    }}>
+                        <Typography variant="h2">Ashley Williams</Typography>
+                    </Box>
+                </Hidden>
             </Box>
 
             <Box sx={{ width: isMdUp ? '50%' : '100%', backgroundColor: 'white', padding: 2 }}>
+                <Hidden smDown>
+                    <Box sx={{
+                        display: 'flex',
+                        position: 'absolute',
+                        top: 75,
+                        right: 100,
+                        color: 'white',
+                        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)',
+                        justifyContent: 'flex-end'
+                    }}>
+                        <Typography variant="h2" textAlign="right">Ashley Williams</Typography>
+                    </Box>
+                </Hidden>
                 <Typography variant="h4" sx={{ textAlign: 'center', paddingBottom: 1 }}>About me</Typography>
                 <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Typography>
             </Box>
