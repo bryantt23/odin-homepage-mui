@@ -7,7 +7,9 @@ import Twitter from '../assets/images/twitter-3.svg';
 function Contact() {
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, backgroundColor: "#0791b2", padding: "20px 20px 50px 20px" }}>
-            <Typography variant="h3" sx={{ paddingLeft: 1, color: 'white', textAlign: "center" }}>Contact me</Typography>
+            <Typography variant="h3" sx={{ paddingLeft: 1, color: 'white', textAlign: { xs: "center", md: "left" } }}>
+                Contact me
+            </Typography>
             <Typography variant="h5" sx={{ paddingLeft: 1, color: 'white' }}>
                 Please get in touch if you think our work could be mutually beneficial!
             </Typography>
