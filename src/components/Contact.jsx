@@ -7,7 +7,7 @@ import Twitter from '../assets/images/twitter-3.svg';
 function Contact() {
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, backgroundColor: "#0791b2", padding: "20px 20px 50px 20px" }}>
-            <Typography variant="h3" sx={{ paddingLeft: 1, color: 'white', textAlign: { xs: "center", md: "left" } }}>
+            <Typography variant="h3" sx={{ paddingLeft: 1, color: 'white', textAlign: { xs: "center", sm: "left" } }}>
                 Contact me
             </Typography>
             <Typography variant="h5" sx={{ paddingLeft: 1, color: 'white' }}>
@@ -23,7 +23,7 @@ function Contact() {
                 555-555-5555<br />
                 ashleywilliams.is.not.real@gmail.com
             </Typography>
-            <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center' }}>
+            <Box sx={{ display: 'flex', gap: 3, justifyContent: { xs: 'center', sm: "left" } }}>
                 <Box component="img"
                     src={Github}
                     sx={{
@@ -43,7 +43,7 @@ function Contact() {
                     }}>
                 </Box>
             </Box>
-        </Box>
+        </Box >
     )
 }
 

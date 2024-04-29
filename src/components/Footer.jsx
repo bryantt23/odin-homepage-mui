@@ -6,10 +6,10 @@ import Contact from './Contact'
 function Footer() {
     return (
         <Grid container sx={{ backgroundColor: "#0791b2" }}>
-            <Grid item md={6} xs={12}>
+            <Grid item sm={6} xs={12}>
                 <Contact />
             </Grid>
-            <Grid item md={6} xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Grid item sm={6} xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
                 <Box component="img"
                     src={Headshot}
                     sx={{

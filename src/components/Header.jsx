@@ -7,23 +7,23 @@ import Twitter from '../assets/images/twitter-3.svg';
 
 function Header() {
     const theme = useTheme();
-    const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
+    const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
 
     return (
         <Box sx={{
             background: `linear-gradient(165deg, #0791b2 50%, transparent 50%)`,
             display: 'flex',
-            flexDirection: isMdUp ? 'row' : 'column',
+            flexDirection: isSmUp ? 'row' : 'column',
             alignItems: 'center',
             padding: 3
         }}>
             <Box sx={{
                 position: 'relative',
-                width: isMdUp ? '50%' : '100%',
+                width: isSmUp ? '50%' : '100%',
             }}>
                 <Box component="img" src={Headshot} sx={{ width: "100%" }} />
 
-                <Hidden mdUp>
+                <Hidden smUp>
                     <Box sx={{
                         position: 'absolute',
                         bottom: 25,
@@ -36,7 +36,7 @@ function Header() {
                 </Hidden>
             </Box>
 
-            <Box sx={{ width: isMdUp ? '50%' : '100%', backgroundColor: 'white', padding: 2 }}>
+            <Box sx={{ width: isSmUp ? '50%' : '100%', backgroundColor: 'white', padding: 2 }}>
                 <Hidden smDown>
                     <Box sx={{
                         display: 'flex',
@@ -52,21 +52,22 @@ function Header() {
                 </Hidden>
                 <Typography variant="h4" sx={{ textAlign: 'center', paddingBottom: 1 }}>About me</Typography>
                 <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Typography>
+
+                <Hidden only={["sm"]}>
+                    <Box sx={{
+                        display: 'flex',
+                        justifyContent: { xs: "center", lg: 'flex-end' },
+                        padding: 1,
+                        gap: 2,
+                        width: '100%'  // Ensure full width for centering on small screens
+                    }}>
+                        <Avatar src={Github} />
+                        <Avatar src={LinkedIn} />
+                        <Avatar src={Twitter} />
+                    </Box>
+                </Hidden>
             </Box>
 
-            <Hidden smUp>
-                <Box sx={{
-                    display: 'flex',
-                    justifyContent: "center",
-                    padding: 1,
-                    gap: 2,
-                    width: '100%'  // Ensure full width for centering on small screens
-                }}>
-                    <Avatar src={Github} />
-                    <Avatar src={LinkedIn} />
-                    <Avatar src={Twitter} />
-                </Box>
-            </Hidden>
         </Box>
     );
 }
